@@ -117,7 +117,7 @@ class DepGraph():
 
             if fillcolor:
                 # allow for striped fillings when there is more than one color specified
-                if fillcolor.find(':')>=0
+                if fillcolor.find(':')>=0:
                     # different for box and ellipse
                     if item_kind(node)=='box':
                         style='striped'
