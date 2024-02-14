@@ -126,7 +126,6 @@ class DepGraph():
                                label=node.id.split(':')[-1],
                                shape=shapes.get(item_kind(node), 'ellipse'),
                                style=style,
-                               gradientangle=90,
                                color=color,
                                fillcolor=fillcolor)
             else:
