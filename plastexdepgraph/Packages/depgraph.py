@@ -116,10 +116,20 @@ class DepGraph():
             fillcolor = self.document.userdata['dep_graph'].get('fillcolorizer', lambda x: '')(node)
 
             if fillcolor:
+                # allow for striped fillings when there is more than one color specified
+                if fillcolor.find(':')>=0
+                    # different for box and ellipse
+                    if item_kind(node)=='box':
+                        style='striped'
+                    else:
+                        style='wedged'
+                else:
+                    style='filled'
+
                 graph.add_node(node.id,
                                label=node.id.split(':')[-1],
                                shape=shapes.get(item_kind(node), 'ellipse'),
-                               style='filled',
+                               style=style,
                                color=color,
                                fillcolor=fillcolor)
             else:
